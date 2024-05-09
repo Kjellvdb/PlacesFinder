@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>PlacesFinder</title>
+  </head>
+  <body>
+    <header id="menu">
+      <select id="vervoersmiddel" required>
+        <option value="" disabled selected hidden>Vervoersmiddel</option>
+        <option value="1" style="background-color: #fff">Fiets</option>
+        <option value="2" style="background-color: #fff">Auto</option>
+        <option value="3" style="background-color: #fff">Te voet</option>
+        <option value="4" style="background-color: #fff">
+          Openbaar vervoer
+        </option>
+      </select>
+      <input id="gebouw" type="text" placeholder="Vul hier je type gebouw in" />
+      <input type="button" value="Submit" id="submit" />
+    </header>
+    <nav id="panel"></nav>
+    <div id="scherm">
+      <article id="map"></article>
+      <aside id="sidebar"></aside>
+    </div>
+  </body>
+  <script type="module" src="./js/index.js"></script>
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=KEY
+		&loading=async&libraries=places"
+  ></script>
+</html>
